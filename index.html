@@ -5,10 +5,11 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
     <!-- ^^ adding http-equiv="Content-Type" content="text/html" tells the destination rendering engine how to process text and special characters for HTML emails -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="x-apple-disable-message-reformatting">
     <!-- ^^ stops apple from adjusting sizes in their mail apps-->
-    <title>HTML Email Template</title>
+    <title>HTML Email Sample Template</title>
     <!--[if mso]> 
 <noscript> 
 <xml> 
@@ -20,12 +21,119 @@
 <![endif]-->
 <!-- ^^ mso = Microsoft Outlook. This helps ensure that PNG images display correctly in Outlook on Windows -->
     <!-- Internal Style Sheet - *NOTE: HTML email only support ONE class PER element! It will NOT support multiple classes on an element! -->
-    <style>
+    <style type="text/css">
+        body {
+            margin: 0;
+            background-color: #cccccc;
+        }
+
+        table {
+            border-spacing: 0;
+        }
+
+        td {
+            padding: 0;
+        }
+
+        img {
+            border: 0;
+        }
+
+        .wrapper {
+            width: 100%;
+            /* ^^ width: 100%; keeps it within the width of mobile devices and email clients */
+            table-layout: fixed;
+            /* ^^ table-layout: fixed; keeps the table stays with the wrapper class of the center tag */
+            background-color: #cccccc;
+            /* ^^ background-color: #cccccc; was already added to the body, but this helps ensure that some email clients respect this. */
+            padding-bottom: 60px;
+            /* ^^ padding-bottom: 60px; is not required, but helps give a little room at the bottom of the email if needed.*/
+        }
+
+        .main {
+            background-color: #ffffff;
+            margin: 0 auto;
+            /* ^^ keeps main table centered for wider email clients and maintain the position in the web browser */
+            width: 100%;
+            /* ^^ to reinforce the width attribute */
+            max-width: 600px;
+            /* ^^ sets the full width of the email template which is standard */
+            border-spacing: 0;
+            /* ^^ prevents some email clients from adding inherent spacing to the edges of the template.*/
+            font-family: sans-serif;
+            color: #4a4a4a;
+        }
 
     </style>
     <!-- ^^ END Internal Style Sheet -->
 </head>
 <body>
-    
+    <center class="wrapper">
+    <!-- ^^ center tag is from HTML4 and is depreciated in web development, but is still useful in email development.-->
+    <table role="presentation" class="main" width="100%">
+<!-- BLUE BORDER -->
+        <tr>
+            <td height="8" style="background-color: #289dcf;"></td>
+        </tr>
+
+<!--  HEADER SECTION  -->
+        <tr>
+            <td>
+                <table width="100%">
+                    
+                </table>
+            </td>
+        </tr>
+
+<!--  BANNER IMAGE  -->
+
+
+<!--  TITLE, TEXT & BUTTON  -->
+        <tr>
+            <td>
+                <table width="100%">
+                    
+                </table>
+            </td>
+        </tr>
+
+<!--  BLUE BORDER  -->
+
+
+<!-- THREE COLUMN SECTION -->
+        <tr>
+            <td>
+                <table width="100%">
+                    
+                </table>
+            </td>
+        </tr>
+
+<!-- BLUE BORDER  -->
+
+
+
+<!-- TWO COLUMN SECTION  -->
+        <tr>
+            <td>
+                <table width="100%">
+                    
+                </table>
+            </td>
+        </tr>
+
+
+<!--  FOOTER SECTION  -->
+        <tr>
+            <td>
+                <table width="100%">
+                    
+                </table>
+            </td>
+        </tr>
+<!-- NOTE: at 11:14 in video: https://www.youtube.com/watch?v=OkH_bTxA08Q&t=14s -->
+    </table>
+    <!-- ^^ END MAIN TABLE -->
+    </center>
 </body>
 </html>
