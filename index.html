@@ -64,6 +64,22 @@
             color: #4a4a4a;
         }
 
+        .two-columns {
+            text-align: center;
+            /* ^^ centers the td tag on mobile */
+            font-size: 0;
+            /* ^^ prevents any inherent spacing around links by email client */
+        }
+        
+        .two-columns .column {
+            width: 100%;
+            /* ^^ for mobile to center images when under 600px width*/
+            max-width: 300px;
+            display: inline-block;
+            vertical-align: top;
+            /* ^^ so that they display on top of one another on smaller screens */
+        }
+
     </style>
     <!-- ^^ END Internal Style Sheet -->
 </head>
@@ -78,15 +94,53 @@
 
 <!--  HEADER SECTION  -->
         <tr>
-            <td>
+            <td style="padding: 14px 0 4px;">
                 <table width="100%">
-                    
+                    <tr>
+                        <td class="two-columns">
+                            <table role="none" class="column">
+                                <tr>
+                                    <td style="padding: 0 62px 10px;">
+                                        <a href="#">
+                                            <img src="img/insight.png" alt="Insight Company Logo" width="180" title="Insight Logo">
+                                        </a>                                        
+                                    </td>
+                                </tr>
+                            </table>
+                            <table role="none" class="column">
+                                <tr>
+                                    <td style="padding: 10px 68px;">
+                                        <a href="#">
+                                            <img src="img/circle-facebook.png" alt="facebook" width="32" title="Facebook">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/circle-twitter.png" alt="twitter" width="32" title="Twitter">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/circle-youtube.png" alt="youtube" width="32" title="YouTube">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/circle-linkedin.png" alt="linkedin" width="32" title="Linkedin">
+                                        </a>
+                                        <a href="#">
+                                            <img src="img/circle-instagram.png" alt="instagram" width="32" title="Instagram">
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
                 </table>
             </td>
         </tr>
 
 <!--  BANNER IMAGE  -->
 
+        <tr>
+            <td>
+                <a href="#"><img src="img/banner.jpg" alt="" width="600" style="max-width: 100%;"></a>
+            </td>
+        </tr>
 
 <!--  TITLE, TEXT & BUTTON  -->
         <tr>
@@ -122,7 +176,6 @@
             </td>
         </tr>
 
-
 <!--  FOOTER SECTION  -->
         <tr>
             <td>
@@ -131,7 +184,7 @@
                 </table>
             </td>
         </tr>
-<!-- NOTE: at 11:14 in video: https://www.youtube.com/watch?v=OkH_bTxA08Q&t=14s -->
+
     </table>
     <!-- ^^ END MAIN TABLE -->
     </center>
