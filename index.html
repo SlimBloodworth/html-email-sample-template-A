@@ -89,6 +89,19 @@
             border-radius: 5px;
         }
 
+        .three-columns {
+            text-align: center;
+            font-size: 0;
+            padding: 35px 0 20px;
+        }
+
+        .three-columns .column {
+            width: 100%;           
+            max-width: 200px;
+            display: inline-block;
+            vertical-align: top;            
+        }
+
     </style>
     <!-- ^^ END Internal Style Sheet -->
 </head>
@@ -167,20 +180,88 @@
         </tr>
 
 <!--  BLUE BORDER  -->
-<!-- *** NOTE: at 23:56 in video: https://www.youtube.com/watch?v=OkH_bTxA08Q&t=14s -->
+
+        <tr>
+            <td height="2" style="background-color: #a6d8ee;"></td>
+        </tr>
 
 <!-- THREE COLUMN SECTION -->
         <tr>
             <td>
-                <table width="100%">
-                    
+                <table role="presentation" width="100%">
+                    <tr>
+                        <td class="three-columns">
+                            <!-- Column 1 -->
+                            <table role="none" class="column">
+                                <tr>
+                                    <td class="padding">
+                                        <table role="none" class="content">
+                                            <tr>
+                                                <td>
+                                                    <a href="#"><img src="img/ecommerce.jpg" alt="Shopping cart" width="110px" style="max-width: 110px; border-radius: 55px;"></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 10px;">
+                                                    <p style="font-weight: bold; font-size: 17px;">Ecommerce</p>
+                                                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- Column 2 -->
+                            <table role="none" class="column">
+                                <tr>
+                                    <td class="padding">
+                                        <table role="none" class="content">
+                                            <tr>
+                                                <td>
+                                                    <a href="#"><img src="img/web-design.jpg" alt="web development" width="110px" style="max-width: 110px; border-radius: 55px;"></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 10px;">
+                                                    <p style="font-weight: bold; font-size: 17px;">Web Development</p>
+                                                    <p>A simple responsive landing page sample.</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- Column 3 -->
+                            <table role="none" class="column">
+                                <tr>
+                                    <td class="padding">
+                                        <table role="none" class="content">
+                                            <tr>
+                                                <td>
+                                                    <a href="#"><img src="img/email-design.jpg" alt="email design" width="110px" style="max-width: 110px; border-radius: 55px;"></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 10px;">
+                                                    <p style="font-weight: bold; font-size: 17px;">HTML Email</p>
+                                                    <p>A simple responsive email template sample.</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
                 </table>
             </td>
         </tr>
 
 <!-- BLUE BORDER  -->
 
-
+        <tr>
+            <td height="2" style="background-color: #a6d8ee;"></td>
+        </tr>
 
 <!-- TWO COLUMN SECTION  -->
         <tr>
