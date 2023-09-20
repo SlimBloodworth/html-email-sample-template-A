@@ -80,6 +80,15 @@
             /* ^^ so that they display on top of one another on smaller screens */
         }
 
+        .button {
+            background-color: #289dcf;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 20px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
     </style>
     <!-- ^^ END Internal Style Sheet -->
 </head>
@@ -95,7 +104,7 @@
 <!--  HEADER SECTION  -->
         <tr>
             <td style="padding: 14px 0 4px;">
-                <table width="100%">
+                <table role="presentation" width="100%">
                     <tr>
                         <td class="two-columns">
                             <table role="none" class="column">
@@ -144,15 +153,21 @@
 
 <!--  TITLE, TEXT & BUTTON  -->
         <tr>
-            <td>
-                <table width="100%">
-                    
+            <td style="padding: 5px 0 50px;">
+                <table role="presentation" width="100%">
+                    <tr>
+                        <td style="text-align: center; padding: 15px;">
+                            <p style="font-size: 20px; font-weight: bold;">Simple HTML <strong style="color: #289dcf">Sample Template</strong></p>
+                            <p style="font-size: 15px; line-height: 23px; padding: 5px 0 15px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam consequatur quibusdam culpa possimus eius quasi modi obcaecati voluptatum hic temporibus porro corporis iste, autem ipsa.</p>
+                            <a href="#" class="button">More Info</a>
+                        </td>
+                    </tr>
                 </table>
             </td>
         </tr>
 
 <!--  BLUE BORDER  -->
-
+<!-- *** NOTE: at 23:56 in video: https://www.youtube.com/watch?v=OkH_bTxA08Q&t=14s -->
 
 <!-- THREE COLUMN SECTION -->
         <tr>
