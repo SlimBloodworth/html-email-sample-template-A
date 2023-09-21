@@ -102,6 +102,30 @@
             vertical-align: top;            
         }
 
+        .three-columns .padding {
+            padding: 15px;
+        }
+
+        .three-columns .content {
+            font-size: 15px;
+            line-height: 20px;
+        }
+
+        .two-columns.last {
+            padding: 35px 0;
+        }
+        /* ^^ No spaces between .two-columns and .last because they are in the same element. */
+
+        .two-columns .padding {
+            padding: 20px;
+        }
+
+        .two-columns .content {
+            font-size: 15px;
+            line-height: 20px;
+            text-align: left;            
+        }
+        /* ^^ text-align: left; aligns text to the left to break from the centered aligned td tag. */
     </style>
     <!-- ^^ END Internal Style Sheet -->
 </head>
@@ -264,14 +288,54 @@
         </tr>
 
 <!-- TWO COLUMN SECTION  -->
-        <tr>
-            <td>
-                <table width="100%">
-                    
-                </table>
-            </td>
-        </tr>
-
+<tr>
+    <td>
+        <!-- Column 1-->
+        <table role="presentation" width="100%">
+            <tr>
+                <td class="two-columns last">
+                    <table role="none" class="column">
+                        <tr>
+                            <td class="padding">
+                                <table role="none" class="content">
+                                    <tr>
+                                        <td>
+                                            <a href="#"><img src="img/palette.jpg" alt="a color palette" width="260" style="max-width: 260px;"></a>
+                                            <!-- ^^ for width: 260 *NOTE: don't add px to width attribute. Only do that in styling ex: style="width: 260px;" Here, use of style="max-width: 260px;" is for best practices to ensure it is contained on email clients. -->
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <!-- Column 2-->
+        <table role="none" width="100%">
+            <tr>
+                <td class="two-columns last">
+                    <table role="none" class="column">
+                        <tr>
+                            <td class="padding">
+                                <table role="none" class="content">
+                                    <tr>
+                                        <td>
+                                            <p style="font-size: 17px; font-weight: bold;">Create Custom Designs</p>
+                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis beatae reiciendis temporibus eius facere eveniet!</p>
+                                            <p style="padding-bottom: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, atque.</p>
+                                            <a href="#" class="button">Read More</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>       
 <!--  FOOTER SECTION  -->
         <tr>
             <td>
