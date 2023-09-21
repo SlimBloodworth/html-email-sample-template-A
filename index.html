@@ -63,21 +63,25 @@
             font-family: sans-serif;
             color: #4a4a4a;
         }
-
-        .two-columns {
+        
+        .two-columns-header {
             text-align: center;
             /* ^^ centers the td tag on mobile */
             font-size: 0;
             /* ^^ prevents any inherent spacing around links by email client */
         }
-        
-        .two-columns .column {
+
+        .two-columns-header .column {
             width: 100%;
             /* ^^ for mobile to center images when under 600px width*/
             max-width: 300px;
             display: inline-block;
             vertical-align: top;
             /* ^^ so that they display on top of one another on smaller screens */
+        } 
+
+        .two-columns-header .padding {
+            padding: 20px;
         }
 
         .button {
@@ -111,21 +115,36 @@
             line-height: 20px;
         }
 
-        .two-columns.last {
-            padding: 35px 0;
+        .two-columns-last {
+            text-align: center;
         }
-        /* ^^ No spaces between .two-columns and .last because they are in the same element. */
 
-        .two-columns .padding {
+        .two-columns-last.bottom-two-col {
+            padding: 35px 0;            
+        }
+        /* ^^ No spacing between .two-columns-last and .bottom-two-col because they are in the same element*/
+
+        .two-columns-last .padding {
             padding: 20px;
         }
 
-        .two-columns .content {
+        .two-columns-last .content {
             font-size: 15px;
             line-height: 20px;
-            text-align: left;            
+            text-align: left;
+            /* ^^ text-align: left; aligns text to the left to break from the centered aligned td tag. */
         }
-        /* ^^ text-align: left; aligns text to the left to break from the centered aligned td tag. */
+
+        .two-columns-last .column {
+            width: 100%;
+            /* ^^ for mobile to center images when under 600px width*/           
+            max-width: 260px;
+            display: inline-table;
+            /** ^^ display: inline-block; was not working for this. Stacks one above the other on all screens./
+            vertical-align: top;
+             /* ^^ so that they display on top of one another on smaller screens*/ 
+        }
+
     </style>
     <!-- ^^ END Internal Style Sheet -->
 </head>
@@ -143,13 +162,15 @@
             <td style="padding: 14px 0 4px;">
                 <table role="presentation" width="100%">
                     <tr>
-                        <td class="two-columns">
+                        <td class="two-columns-header">
                             <table role="none" class="column">
                                 <tr>
                                     <td style="padding: 0 62px 10px;">
                                         <a href="#">
-                                            <img src="img/insight.png" alt="Insight Company Logo" width="180" title="Insight Logo">
-                                        </a>                                        
+                                            <!-- <img src="img/insight.png" alt="Insight Company Logo" width="180" title="Insight Logo"> -->
+                                            <img src="https://i.ibb.co/cFRZXr6/insight.png" alt="Insight Company Logo" width="180" title="Insight Logo">
+                                        </a>
+                                        <!-- ^^ for width: 180 *NOTE: don't add px to width attribute. Only do that in styling -->                                        
                                     </td>
                                 </tr>
                             </table>
@@ -157,19 +178,24 @@
                                 <tr>
                                     <td style="padding: 10px 68px;">
                                         <a href="#">
-                                            <img src="img/circle-facebook.png" alt="facebook" width="32" title="Facebook">
+                                            <!-- <img src="img/circle-facebook.png" alt="facebook" width="32" title="Facebook"> -->
+                                            <img src="https://i.ibb.co/FHbX8XB/circle-facebook.png" alt="facebook" width="32" title="Facebook"">
                                         </a>
                                         <a href="#">
-                                            <img src="img/circle-twitter.png" alt="twitter" width="32" title="Twitter">
+                                            <!-- <img src="img/circle-twitter.png" alt="twitter" width="32" title="Twitter"> -->
+                                            <img src="https://i.ibb.co/5BFKNC4/circle-twitter.png" alt="twitter" width="32" title="Twitter">
                                         </a>
                                         <a href="#">
-                                            <img src="img/circle-youtube.png" alt="youtube" width="32" title="YouTube">
+                                            <!-- <img src="img/circle-youtube.png" alt="youtube" width="32" title="YouTube"> -->
+                                            <img src="https://i.ibb.co/6Z4MSkH/circle-youtube.png" alt="youtube" width="32" title="YouTube">
                                         </a>
                                         <a href="#">
-                                            <img src="img/circle-linkedin.png" alt="linkedin" width="32" title="Linkedin">
+                                            <!-- <img src="img/circle-linkedin.png" alt="linkedin" width="32" title="Linkedin"> -->
+                                            <img src="https://i.ibb.co/4KSpTMc/circle-linkedin.png" alt="linkedin" width="32" title="Linkedin">
                                         </a>
                                         <a href="#">
-                                            <img src="img/circle-instagram.png" alt="instagram" width="32" title="Instagram">
+                                            <!-- <img src="img/circle-instagram.png" alt="instagram" width="32" title="Instagram"> -->
+                                            <img src="https://i.ibb.co/w4PjsmK/circle-instagram.png" alt="instagram" width="32" title="Instagram">
                                         </a>
                                     </td>
                                 </tr>
@@ -184,7 +210,10 @@
 
         <tr>
             <td>
-                <a href="#"><img src="img/banner.jpg" alt="" width="600" style="max-width: 100%;"></a>
+                <a href="#">
+                    <!-- <img src="img/banner.jpg" alt="" width="600" style="max-width: 100%;"> -->
+                    <img src="https://i.ibb.co/Rp6hrHm/banner.jpg" alt="" width="600" style="max-width: 100%;">
+                </a>
             </td>
         </tr>
 
@@ -222,7 +251,10 @@
                                         <table role="none" class="content">
                                             <tr>
                                                 <td>
-                                                    <a href="#"><img src="img/ecommerce.jpg" alt="Shopping cart" width="110px" style="max-width: 110px; border-radius: 55px;"></a>
+                                                    <a href="#">
+                                                        <!-- <img src="img/ecommerce.jpg" alt="Shopping cart" width="110px" style="max-width: 110px; border-radius: 55px;"> -->
+                                                        <img src="https://i.ibb.co/sVhspNJ/ecommerce.jpg" alt="Shopping cart" width="110px" style="max-width: 110px; border-radius: 55px;">
+                                                    </a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -242,7 +274,10 @@
                                         <table role="none" class="content">
                                             <tr>
                                                 <td>
-                                                    <a href="#"><img src="img/web-design.jpg" alt="web development" width="110px" style="max-width: 110px; border-radius: 55px;"></a>
+                                                    <a href="#">
+                                                        <!-- <img src="img/web-design.jpg" alt="web development" width="110px" style="max-width: 110px; border-radius: 55px;"> -->
+                                                        <img src="https://i.ibb.co/DMXhQkx/web-design.jpg" alt="web development" width="110px" style="max-width: 110px; border-radius: 55px;">
+                                                    </a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -262,7 +297,10 @@
                                         <table role="none" class="content">
                                             <tr>
                                                 <td>
-                                                    <a href="#"><img src="img/email-design.jpg" alt="email design" width="110px" style="max-width: 110px; border-radius: 55px;"></a>
+                                                    <a href="#">
+                                                        <!-- <img src="img/email-design.jpg" alt="email design" width="110px" style="max-width: 110px; border-radius: 55px;"> -->
+                                                        <img src="https://i.ibb.co/d6vZPDC/email-design.jpg" alt="email design" width="110px" style="max-width: 110px; border-radius: 55px;">
+                                                    </a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -291,16 +329,19 @@
 <tr>
     <td>
         <!-- Column 1-->
-        <table role="presentation" width="100%">
+        <table role="none" width="100%">
             <tr>
-                <td class="two-columns last">
+                <td class="two-columns-last bottom-two-col">
                     <table role="none" class="column">
                         <tr>
                             <td class="padding">
                                 <table role="none" class="content">
                                     <tr>
                                         <td>
-                                            <a href="#"><img src="img/palette.jpg" alt="a color palette" width="260" style="max-width: 260px;"></a>
+                                            <a href="#">
+                                                <!-- <img src="img/palette.jpg" alt="a color palette" width="260" style="max-width: 260px;"> -->
+                                                <img src="https://i.ibb.co/2WH45ck/palette.jpg" alt="a color palette" width="260" style="max-width: 260px;">
+                                            </a>
                                             <!-- ^^ for width: 260 *NOTE: don't add px to width attribute. Only do that in styling ex: style="width: 260px;" Here, use of style="max-width: 260px;" is for best practices to ensure it is contained on email clients. -->
                                         </td>
                                     </tr>
@@ -308,13 +349,6 @@
                             </td>
                         </tr>
                     </table>
-                </td>
-            </tr>
-        </table>
-        <!-- Column 2-->
-        <table role="none" width="100%">
-            <tr>
-                <td class="two-columns last">
                     <table role="none" class="column">
                         <tr>
                             <td class="padding">
@@ -333,18 +367,52 @@
                     </table>
                 </td>
             </tr>
-        </table>
+        </table>        
     </td>
 </tr>       
 <!--  FOOTER SECTION  -->
         <tr>
-            <td>
-                <table width="100%">
-                    
+            <td style="background-color: #565656; color: #ffffff;">
+                <table role="none" width="100%">
+                    <tr>
+                        <td style="text-align: center; padding: 45px 20px;">
+                            <a href="#" style="text-decoration: none;">
+                                <!--<img src="img/insight-white.png" alt="insight logo" width="160">-->
+                                <img src="https://i.ibb.co/Yds9TqG/insight-white.png" alt="insight logo" width="160">
+                            </a>
+                            <p style="padding: 10px;">Simple HTML Email Template</p>
+                            <p style="padding: 10px;">123 Your Address, Here 12345</p>
+                            <a href="#" style="text-decoration: none;">
+                                <!-- <img src="img/white-facebook.png" alt="facebook" width="30" title="Facebook"> -->
+                                <img src="https://i.ibb.co/HpLsHKT/white-facebook.png" alt="facebook" width="30" title="Facebook">
+                            </a>
+                            <a href="#" style="text-decoration: none;">
+                                <!-- <img src="img/white-twitter.png" alt="twitter" width="30" title="Twitter"> -->
+                                <img src="https://i.ibb.co/KKdC0bL/white-twitter.png" alt="twitter" width="30" title="Twitter">
+                            </a>
+                            <a href="#" style="text-decoration: none;">
+                                <!-- <img src="img/white-youtube.png" alt="youtube" width="30" title="YouTube"> -->
+                                <img src="https://i.ibb.co/dMqDLW5/white-youtube.png" alt="youtube" width="30" title="YouTube">
+                            </a>
+                            <a href="#" style="text-decoration: none;">
+                                <!-- <img src="img/white-linkedin.png" alt="linkedin" width="30" title="Linkedin"> -->
+                                <img src="https://i.ibb.co/5xVJtFT/white-linkedin.png" alt="linkedin" width="30" title="Linkedin">
+                            </a>
+                            <a href="#" style="text-decoration: none;">
+                                <!-- <img src="img/white-instagram.png" alt="instagram" width="30" title="Instagram"> -->
+                                <img src="https://i.ibb.co/pQ3NtZB/white-instagram.png" alt="instagram" width="30" title="Instagram">
+                            </a>
+                            <!-- <a href="#" style="padding: 10px; color: #ffffff; text-decoration: none;">SUBSCRIBE</a> -->
+                            <p><a href="#" style="padding: 10px; color: #ffffff; text-decoration: none;">SUBSCRIBE</a></p>
+                        </td>
+                    </tr>
                 </table>
             </td>
         </tr>
-
+        <!-- BLUE BORDER -->
+        <tr>
+            <td height="10" style="background-color: #289dcf;"></td>
+        </tr>
     </table>
     <!-- ^^ END MAIN TABLE -->
     </center>
