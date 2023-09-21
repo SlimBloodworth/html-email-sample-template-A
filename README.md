@@ -14,7 +14,7 @@ An example of a basic HTML email template.
 
 Users should be able to:
 
-- View the optimal layout for the component depending on their device's screen size
+- View the optimal layout depending on their device's screen size
 
 ### Built with
 
