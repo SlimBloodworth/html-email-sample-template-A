@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Live URL
 
-- [Live Site To View](https://slimbloodworth.github.io/html-email-template/)
+- [View Live Site]( https://slimbloodworth.github.io/html-email-sample-template-A/)
 
 ### Useful resources
 
